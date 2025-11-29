@@ -1,0 +1,68 @@
+*{
+    border: none;
+    font-family: Segoe UI, sans-serif;
+    color: #EAEAEA;
+    margin: 0;
+    padding: 0; 
+    /* Убираем все отступы по умолчанию, напишу их сам */
+}
+
+html, body {
+    overflow-y: hidden;
+}
+
+.Register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 703px;
+    height: 100vh;
+    background-color: #353738;
+    gap: 20px;
+}
+
+.register_window {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.register_window input {
+    width: 250px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    background-color: #494c4d;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.Register input:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.register_button {
+    padding: 10px 0;
+    text-align: center;
+    width: 274px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e76292;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.to_login {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}

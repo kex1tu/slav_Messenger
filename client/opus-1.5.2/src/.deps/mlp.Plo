@@ -1,0 +1,31 @@
+src/mlp.lo: src/mlp.c config.h C:/dev/msys2/mingw64/include/math.h \
+ C:/dev/msys2/mingw64/include/crtdefs.h \
+ C:/dev/msys2/mingw64/include/corecrt.h \
+ C:/dev/msys2/mingw64/include/_mingw.h \
+ C:/dev/msys2/mingw64/include/_mingw_mac.h \
+ C:/dev/msys2/mingw64/include/_mingw_secapi.h \
+ C:/dev/msys2/mingw64/include/vadefs.h \
+ C:/dev/msys2/mingw64/include/sdks/_mingw_ddk.h include/opus_types.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
+ C:/dev/msys2/mingw64/include/stdint.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+ C:/dev/msys2/mingw64/include/stddef.h include/opus_defines.h \
+ include/opus_types.h celt/arch.h src/mlp.h
+config.h:
+C:/dev/msys2/mingw64/include/math.h:
+C:/dev/msys2/mingw64/include/crtdefs.h:
+C:/dev/msys2/mingw64/include/corecrt.h:
+C:/dev/msys2/mingw64/include/_mingw.h:
+C:/dev/msys2/mingw64/include/_mingw_mac.h:
+C:/dev/msys2/mingw64/include/_mingw_secapi.h:
+C:/dev/msys2/mingw64/include/vadefs.h:
+C:/dev/msys2/mingw64/include/sdks/_mingw_ddk.h:
+include/opus_types.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h:
+C:/dev/msys2/mingw64/include/stdint.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h:
+C:/dev/msys2/mingw64/include/stddef.h:
+include/opus_defines.h:
+include/opus_types.h:
+celt/arch.h:
+src/mlp.h:

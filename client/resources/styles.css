@@ -1,0 +1,224 @@
+
+/* --- ГЛОБАЛЬНЫЕ НАСТРОЙКИ --- */
+* {
+    border: none;
+    font-family: Segoe UI, sans-serif;
+    color: #EAEAEA;
+
+    /* --- ДОБАВЬТЕ ИЛИ ИЗМЕНИТЕ ЭТУ СТРОКУ --- */
+    font-size: 14pt; /* Например, 14 пунктов. Поэкспериментируйте со значением. */
+                     /* Можно использовать px (пиксели) или pt (пункты) */
+}
+/* --- ГЛАВНОЕ ОКНО И ФОН --- */
+QMainWindow, QDialog {
+    background-color: #18191A; /* Очень темный, почти черный фон */
+}
+/* --- СКРОЛЛБАР --- */
+QScrollBar:vertical {
+    background: transparent; /* Фон всей полосы скроллбара */
+    width: 8px; /* Ширина */
+    margin: 0px;
+    border-radius: 4px; /* Скругляем углы всей полосы */
+}
+
+/* --- ПОЛЗУНОК СКРОЛЛБАРА --- */
+QScrollBar::handle:vertical {
+    background: #5A5A5A; /* Исходный темно-серый цвет */
+    min-height: 25px;    /* Минимальная высота ползунка */
+    border-radius: 4px;  /* Скругленные углы самого ползунка */
+}
+
+/* --- ПОЛЗУНОК ПРИ НАВЕДЕНИИ МЫШИ --- */
+QScrollBar::handle:vertical:hover {
+    background: #E072A4; /* Яркий розовый цвет при наведении */
+}
+
+/* --- ПОЛЗУНОК ПРИ НАЖАТИИ --- */
+QScrollBar::handle:vertical:pressed {
+    background: #D81B60; /* Более темный розовый при нажатии */
+}
+
+/* Убираем стандартные кнопки со стрелками */
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+    height: 0px;
+}
+
+/* Фон (дорожка) над и под ползунком */
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+/* --- ПАНЕЛИ --- */
+/* Левая панель и контейнеры */
+#chatListPanel, #rightSideContainer, #placeholderWidget {
+    background-color: #242526;
+}
+#placeholderLabel {
+    color: #777;
+}
+#replyWidget {
+    background-color: transparent;
+    /* border-bottom: 1px solid #3A3B3C; */ /* Убрали лишнюю линию */
+    padding: 5px;
+}
+#replyColorBar {
+    background-color: #E072A4;
+    min-width: 3px;
+    max-width: 3px;
+    border-radius: 4px;
+}
+#replyNameLabel {
+    color: #E072A4; /* Розовый акцент */
+    font-weight: bold;
+}
+#replyTextLabel {
+    color: #AAAAAA;
+}
+
+/* --- СПИСОК КОНТАКТОВ --- */
+QListWidget {
+    background-color: transparent; /* Делаем фон списка прозрачным */
+    padding: 5px;
+    outline: none;
+}
+
+QListWidget::item {
+    padding: 10px 12px;
+    margin: 2px 0px;
+    border-radius: 8px;
+    color: #EAEAEA;
+    font-weight: normal;
+}
+
+/* Элемент списка при наведении */
+QListWidget::item:hover {
+    background-color: #3A3B3C;
+}
+
+/* --- КНОПКА ПРОКРУТКИ ВНИЗ --- */
+#scrollToBottomButton {
+    background-color: #3D383A;
+    border: 1px solid #555;
+    border-radius: 20px; /* Делает ее идеально круглой */
+}
+#scrollToBottomButton:hover {
+    background-color: #504A4C;
+}
+
+/* --- СЧЕТЧИК НЕПРОЧИТАННЫХ СООБЩЕНИЙ --- */
+#unreadCountLabel {
+    background-color: white;
+    color: #18191A; /* Темный текст */
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 11px; /* Делает его идеально круглым */
+    padding: 2px;
+}
+/* ВЫБРАННЫЙ элемент списка */
+QListWidget::item:selected {
+    background-color: #D81B60; /* Яркий розовый акцент */
+    color: white;
+    font-weight: bold;
+}
+/* Онлайн-статус в списке контактов */
+QListWidget::item[online="true"] {
+    color: white;
+    font-weight: bold;
+}
+
+/* --- ПОЛЯ ВВОДА --- */
+QLineEdit {
+    background-color: #3A3B3C;
+    border-radius: 16px; /* Сильное скругление */
+    padding: 8px 15px;
+    color: #EAEAEA;
+}
+/* Рамка при фокусе */
+QLineEdit:focus {
+    border: 1px solid #D81B60;
+}
+
+/* --- КНОПКИ --- */
+/* Основные кнопки */
+QPushButton {
+    background-color: white;
+    color: #D81B60; /* Розовый текст */
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+QPushButton:hover {
+    background-color: #F0F0F0; /* Чуть темнее при наведении */
+}
+QPushButton:pressed {
+    background-color: #E0E0E0;
+}
+
+/* Кнопка "Выйти" - особый стиль */
+#logoutButton {
+    background-color: #D81B60;
+    color: white;
+}
+#logoutButton:hover {
+    background-color: #E94C8A;
+}
+
+/* Кнопки-иконки */
+QToolButton {
+    background-color: transparent;
+    border-radius: 16px; /* Делаем их круглыми */
+    padding: 6px;
+}
+QToolButton:hover {
+    background-color: #3A3B3C;
+}
+
+/* --- ИНТЕРФЕЙС ЧАТА --- */
+/* Заголовок чата */
+#headerWidget {
+    background-color: #242526;
+    border-bottom: 1px solid #3A3B3C; /* Тонкий разделитель */
+}
+#chatPartnerNameLabel {
+    font-weight: bold;
+    color: white;
+}
+#chatPartnerStatusLabel {
+    color: #AAAAAA;
+}
+
+/* Фон истории чата */
+#chatHistoryView {
+    background-color: #18191A; /* Такой же, как основной фон окна */
+}
+
+/* Панель ввода сообщения */
+#messageInputWidget {
+/*    //background-color: #242526;*/
+    border-top: 1px solid #3A3B3C;
+}
+
+
+/* --- СКРОЛЛБАР --- */
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical {
+    background: #4A4A4A;
+    min-height: 25px;
+    border-radius: 4px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #5A5A5A;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+
+QLineEdit:disabled, QLineEdit[readOnly="true"] {
+    border-radius: 16;
+}

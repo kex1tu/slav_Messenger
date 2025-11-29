@@ -1,0 +1,65 @@
+silk/LPC_analysis_filter.lo: silk/LPC_analysis_filter.c config.h \
+ silk/SigProc_FIX.h C:/dev/msys2/mingw64/include/string.h \
+ C:/dev/msys2/mingw64/include/crtdefs.h \
+ C:/dev/msys2/mingw64/include/corecrt.h \
+ C:/dev/msys2/mingw64/include/_mingw.h \
+ C:/dev/msys2/mingw64/include/_mingw_mac.h \
+ C:/dev/msys2/mingw64/include/_mingw_secapi.h \
+ C:/dev/msys2/mingw64/include/vadefs.h \
+ C:/dev/msys2/mingw64/include/sdks/_mingw_ddk.h \
+ C:/dev/msys2/mingw64/include/sec_api/string_s.h silk/typedef.h \
+ include/opus_types.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
+ C:/dev/msys2/mingw64/include/stdint.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+ C:/dev/msys2/mingw64/include/stddef.h include/opus_defines.h \
+ include/opus_types.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h \
+ C:/dev/msys2/mingw64/include/float.h silk/resampler_structs.h \
+ silk/macros.h celt/arch.h celt/ecintrin.h \
+ C:/dev/msys2/mingw64/include/math.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
+ C:/dev/msys2/mingw64/include/limits.h celt/arch.h celt/cpu_support.h \
+ celt/x86/x86cpu.h silk/x86/SigProc_FIX_sse.h silk/Inlines.h \
+ silk/MacroCount.h silk/MacroDebug.h celt/celt_lpc.h celt/cpu_support.h \
+ celt/x86/celt_lpc_sse.h
+config.h:
+silk/SigProc_FIX.h:
+C:/dev/msys2/mingw64/include/string.h:
+C:/dev/msys2/mingw64/include/crtdefs.h:
+C:/dev/msys2/mingw64/include/corecrt.h:
+C:/dev/msys2/mingw64/include/_mingw.h:
+C:/dev/msys2/mingw64/include/_mingw_mac.h:
+C:/dev/msys2/mingw64/include/_mingw_secapi.h:
+C:/dev/msys2/mingw64/include/vadefs.h:
+C:/dev/msys2/mingw64/include/sdks/_mingw_ddk.h:
+C:/dev/msys2/mingw64/include/sec_api/string_s.h:
+silk/typedef.h:
+include/opus_types.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h:
+C:/dev/msys2/mingw64/include/stdint.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h:
+C:/dev/msys2/mingw64/include/stddef.h:
+include/opus_defines.h:
+include/opus_types.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h:
+C:/dev/msys2/mingw64/include/float.h:
+silk/resampler_structs.h:
+silk/macros.h:
+celt/arch.h:
+celt/ecintrin.h:
+C:/dev/msys2/mingw64/include/math.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h:
+C:/dev/msys2/mingw64/include/limits.h:
+celt/arch.h:
+celt/cpu_support.h:
+celt/x86/x86cpu.h:
+silk/x86/SigProc_FIX_sse.h:
+silk/Inlines.h:
+silk/MacroCount.h:
+silk/MacroDebug.h:
+celt/celt_lpc.h:
+celt/cpu_support.h:
+celt/x86/celt_lpc_sse.h:

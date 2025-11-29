@@ -1,0 +1,74 @@
+ 
+
+#if !defined(X86CPU_H)
+# define X86CPU_H
+
+# if defined(OPUS_X86_MAY_HAVE_SSE)
+#  define MAY_HAVE_SSE(name) name ## _sse
+# else
+#  define MAY_HAVE_SSE(name) name ## _c
+# endif
+
+# if defined(OPUS_X86_MAY_HAVE_SSE2)
+#  define MAY_HAVE_SSE2(name) name ## _sse2
+# else
+#  define MAY_HAVE_SSE2(name) name ## _c
+# endif
+
+# if defined(OPUS_X86_MAY_HAVE_SSE4_1)
+#  define MAY_HAVE_SSE4_1(name) name ## _sse4_1
+# else
+#  define MAY_HAVE_SSE4_1(name) name ## _c
+# endif
+
+# if defined(OPUS_X86_MAY_HAVE_AVX2)
+#  define MAY_HAVE_AVX2(name) name ## _avx2
+# else
+#  define MAY_HAVE_AVX2(name) name ## _c
+# endif
+
+# if defined(OPUS_HAVE_RTCD) && \
+  ((defined(OPUS_X86_MAY_HAVE_SSE) && !defined(OPUS_X86_PRESUME_SSE)) || \
+  (defined(OPUS_X86_MAY_HAVE_SSE2) && !defined(OPUS_X86_PRESUME_SSE2)) || \
+  (defined(OPUS_X86_MAY_HAVE_SSE4_1) && !defined(OPUS_X86_PRESUME_SSE4_1)) || \
+  (defined(OPUS_X86_MAY_HAVE_AVX2) && !defined(OPUS_X86_PRESUME_AVX2)))
+int opus_select_arch(void);
+# endif
+
+# if defined(OPUS_X86_MAY_HAVE_SSE2)
+#  include "opus_defines.h"
+
+ 
+#  if defined(__clang__)
+#   if __has_warning("-Wextra-semi-stmt") || \
+ __has_builtin(__builtin_rotateleft32)
+#    define OPUS_CLANG_8 (1)
+#   endif
+#  endif
+#  if !defined(_MSC_VER) && !OPUS_GNUC_PREREQ(11,3) && !defined(OPUS_CLANG_8)
+#   include <string.h>
+#   include <emmintrin.h>
+
+#   ifdef _mm_loadu_si32
+#    undef _mm_loadu_si32
+#   endif
+#   define _mm_loadu_si32 WORKAROUND_mm_loadu_si32
+static inline __m128i WORKAROUND_mm_loadu_si32(void const* mem_addr) {
+  int val;
+  memcpy(&val, mem_addr, sizeof(val));
+  return _mm_cvtsi32_si128(val);
+}
+#  elif defined(_MSC_VER)
+     
+#   include <immintrin.h>
+#  endif
+
+#  define OP_CVTEPI8_EPI32_M32(x) \
+ (_mm_cvtepi8_epi32(_mm_loadu_si32(x)))
+
+#  define OP_CVTEPI16_EPI32_M64(x) \
+ (_mm_cvtepi16_epi32(_mm_loadl_epi64((__m128i *)(void*)(x))))
+
+# endif
+
+#endif

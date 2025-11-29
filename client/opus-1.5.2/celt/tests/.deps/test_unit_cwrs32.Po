@@ -1,0 +1,92 @@
+celt/tests/test_unit_cwrs32.o: celt/tests/test_unit_cwrs32.c config.h \
+ C:/dev/msys2/mingw64/include/stdio.h \
+ C:/dev/msys2/mingw64/include/corecrt_stdio_config.h \
+ C:/dev/msys2/mingw64/include/corecrt.h \
+ C:/dev/msys2/mingw64/include/_mingw.h \
+ C:/dev/msys2/mingw64/include/_mingw_mac.h \
+ C:/dev/msys2/mingw64/include/_mingw_secapi.h \
+ C:/dev/msys2/mingw64/include/vadefs.h \
+ C:/dev/msys2/mingw64/include/sdks/_mingw_ddk.h \
+ C:/dev/msys2/mingw64/include/_mingw_off_t.h \
+ C:/dev/msys2/mingw64/include/swprintf.inl \
+ C:/dev/msys2/mingw64/include/sec_api/stdio_s.h \
+ C:/dev/msys2/mingw64/include/string.h \
+ C:/dev/msys2/mingw64/include/crtdefs.h \
+ C:/dev/msys2/mingw64/include/sec_api/string_s.h celt/stack_alloc.h \
+ include/opus_types.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
+ C:/dev/msys2/mingw64/include/stdint.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+ C:/dev/msys2/mingw64/include/stddef.h include/opus_defines.h \
+ include/opus_types.h celt/entenc.c celt/os_support.h \
+ C:/dev/msys2/mingw64/include/stdlib.h \
+ C:/dev/msys2/mingw64/include/corecrt_wstdlib.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
+ C:/dev/msys2/mingw64/include/limits.h \
+ C:/dev/msys2/mingw64/include/sec_api/stdlib_s.h \
+ C:/dev/msys2/mingw64/include/malloc.h \
+ C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
+ C:/dev/msys2/mingw64/include/errno.h celt/arch.h celt/entenc.h \
+ celt/entcode.h celt/ecintrin.h C:/dev/msys2/mingw64/include/math.h \
+ celt/mfrngcod.h celt/entdec.c celt/entdec.h celt/entcode.c celt/cwrs.c \
+ celt/cwrs.h celt/stack_alloc.h celt/mathops.h celt/mathops.c celt/rate.h \
+ celt/modes.h celt/celt.h include/opus_custom.h include/opus_defines.h \
+ celt/mdct.h celt/kiss_fft.h celt/cpu_support.h celt/x86/x86cpu.h
+config.h:
+C:/dev/msys2/mingw64/include/stdio.h:
+C:/dev/msys2/mingw64/include/corecrt_stdio_config.h:
+C:/dev/msys2/mingw64/include/corecrt.h:
+C:/dev/msys2/mingw64/include/_mingw.h:
+C:/dev/msys2/mingw64/include/_mingw_mac.h:
+C:/dev/msys2/mingw64/include/_mingw_secapi.h:
+C:/dev/msys2/mingw64/include/vadefs.h:
+C:/dev/msys2/mingw64/include/sdks/_mingw_ddk.h:
+C:/dev/msys2/mingw64/include/_mingw_off_t.h:
+C:/dev/msys2/mingw64/include/swprintf.inl:
+C:/dev/msys2/mingw64/include/sec_api/stdio_s.h:
+C:/dev/msys2/mingw64/include/string.h:
+C:/dev/msys2/mingw64/include/crtdefs.h:
+C:/dev/msys2/mingw64/include/sec_api/string_s.h:
+celt/stack_alloc.h:
+include/opus_types.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h:
+C:/dev/msys2/mingw64/include/stdint.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h:
+C:/dev/msys2/mingw64/include/stddef.h:
+include/opus_defines.h:
+include/opus_types.h:
+celt/entenc.c:
+celt/os_support.h:
+C:/dev/msys2/mingw64/include/stdlib.h:
+C:/dev/msys2/mingw64/include/corecrt_wstdlib.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h:
+C:/dev/msys2/mingw64/include/limits.h:
+C:/dev/msys2/mingw64/include/sec_api/stdlib_s.h:
+C:/dev/msys2/mingw64/include/malloc.h:
+C:/dev/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h:
+C:/dev/msys2/mingw64/include/errno.h:
+celt/arch.h:
+celt/entenc.h:
+celt/entcode.h:
+celt/ecintrin.h:
+C:/dev/msys2/mingw64/include/math.h:
+celt/mfrngcod.h:
+celt/entdec.c:
+celt/entdec.h:
+celt/entcode.c:
+celt/cwrs.c:
+celt/cwrs.h:
+celt/stack_alloc.h:
+celt/mathops.h:
+celt/mathops.c:
+celt/rate.h:
+celt/modes.h:
+celt/celt.h:
+include/opus_custom.h:
+include/opus_defines.h:
+celt/mdct.h:
+celt/kiss_fft.h:
+celt/cpu_support.h:
+celt/x86/x86cpu.h:

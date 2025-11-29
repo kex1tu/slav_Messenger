@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Description" content="messager">
+        <link rel="stylesheet" href="css/register.css">
+</head>
+
+<header class = "header">
+</header>
+
+<body>
+    <div class="Register">
+        <div class = register_window>
+            <input type="text" id="displayname_field" placeholder="Имя пользователя">
+            <input type="text" id="username_field" placeholder="Логин">
+            <input type="password" id="password_field" placeholder="Пароль">
+        </div>
+
+        <div class = "buttons">
+            <button class="register_button" id="register">Регистрация</button>
+            <a class="to_login" href="home.html">Ко входу</a>
+        </div>
+    </div>
+    
+    <!-- <p id="response-message"></p> -->
+
+    <script src = "script/socketConnect.js"></script>
+    <script src="script/register.js"></script>
+</body>
+</html>

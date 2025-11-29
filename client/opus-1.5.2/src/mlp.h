@@ -1,0 +1,37 @@
+ 
+ 
+
+#ifndef MLP_H_
+#define MLP_H_
+
+#include "opus_types.h"
+
+#define WEIGHTS_SCALE (1.f/128)
+
+#define MAX_NEURONS 32
+
+typedef struct {
+  const opus_int8 *bias;
+  const opus_int8 *input_weights;
+  int nb_inputs;
+  int nb_neurons;
+  int sigmoid;
+} AnalysisDenseLayer;
+
+typedef struct {
+  const opus_int8 *bias;
+  const opus_int8 *input_weights;
+  const opus_int8 *recurrent_weights;
+  int nb_inputs;
+  int nb_neurons;
+} AnalysisGRULayer;
+
+extern const AnalysisDenseLayer layer0;
+extern const AnalysisGRULayer layer1;
+extern const AnalysisDenseLayer layer2;
+
+void analysis_compute_dense(const AnalysisDenseLayer *layer, float *output, const float *input);
+
+void analysis_compute_gru(const AnalysisGRULayer *gru, float *state, const float *input);
+
+#endif  

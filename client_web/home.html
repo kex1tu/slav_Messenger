@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Description" content="messager"> -->
+        <link rel="stylesheet" href="css/home.css">
+</head>
+
+<header class="header">    
+</header>
+
+<body class="body">
+    <div class="Login" id="Login_wrapper">
+        <div class = login_window>
+            <input type="text" id="username_field" placeholder="Логин">
+            <input type="password" id="password_field" placeholder="Пароль">
+        </div>
+
+        <div class="buttons">
+            <button class="enter_button" id="login">Войти</button>
+            <a class="to_register" href="register.html">Зарегистрироваться</a>
+        </div>
+    </div>
+
+    <div class="Main hidden" id="Main_wrapper">
+        <div class="profile_wrapper hidden" id="profile_wrapper">
+            <div class="profile_field" id="profile_field">
+                <div class="profile_field_header">
+                    <img class="profile_field_img" src="source/profile_img_default.svg">
+                    <p class="profile_field_name" id = "profile_field_name"></p>
+                    <p class="profile_field_p" id = "profile_field_last_seen"></p>
+                </div>
+                <div class="profile_field_username_field">
+                    <p class="profile_field_username" id = "profile_field_username"></p>
+                    <p class="profile_field_p">Имя пользователя</p>
+                </div>
+                <div class="profile_field_about">
+                    <p class="about_user">Пока ничего нет</p>
+                    <p class="profile_field_p">О себе</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile_wrapper hidden" id="my_profile_wrapper">
+            <div class="settings_menu" id="settings_menu">
+                <a class="profile_field_button" id="settings_cancel">
+                    <img class="profile_field_button_img" src="source/cross.svg">
+                </a>
+                <p class="settings_option" id="my_profile_option">Мой профиль</p>
+                <p class="settings_option">Журнал звонков</p>
+                <p class="settings_option" id="logout_option">Выйти из профиля</p>
+            </div>
+
+            <div class="profile_field hidden" id="my_profile_field">
+                <div class="profile_field_buttons">
+                    <a class="profile_field_button" id="profile_field_cancel">
+                    <img class="profile_field_button_img" src="source/cross.svg">
+                </a>
+                <a class="profile_field_button" id="profile_field_edit">
+                    <img class="profile_field_button_img" id="profile_field_button_img_edit" src="source/edit.svg">
+                    <img class="profile_field_button_img hidden" id="profile_field_button_img_complete" src="source/complete.svg">
+                </a>
+                </div>
+                
+                <div class="profile_field_header">
+                    <img class="profile_field_img" src="source/profile_img_default.svg">
+                    <input class="my_profile_input my_profile_displayname" id="my_profile_displayname" disabled="true">
+                </div>
+                <div class="profile_field_username_field">
+                    <input class="my_profile_input" id="my_profile_username" disabled="true">
+                    <p class="profile_field_p">Имя пользователя</p>
+                </div>
+                <div class="profile_field_about">
+                    <input class="my_profile_input" id="about_me" disabled="true">
+                    <p class="profile_field_p">О себе</p>
+                </div>       
+            </div>
+        </div>
+
+        <div class = "left_column">
+            <div class="left_column_header">
+                <a class="settings_button" id="settings_button">
+                    <img class="settings_img" src="source/hlines.svg">
+                </a>
+                <a class="pending_contact_button" id="pending_contact_button">
+                    <img class="pending_contact_img" src="source/pending_contact.svg" id = "pending_contact_img">
+                    <img class="pending_contact_img hidden" src="source/chat.svg" id = "chat_image">
+                </a>
+                <a class="pending_contact_button hidden" id="search_cancel_button">
+                    <img class="cancel_button_img" src="source/cancel.svg">
+                </a>
+                <input class = "contact_search" id="contact_search" list="contact_search_datalist" placeholder="Поиск контактов...">
+                <!-- <datalist class="contact_search_datalist" id = "contact_search_datalist"></datalist> -->
+            </div>
+            <ul class="pending_contact_list hidden" id = "pending_contact_list">
+                
+            </ul>
+            <ul class = "contact_list" id = "contact_list">
+               
+            </ul>
+            <div class="contact_search_list hidden" id="contact_search_list">
+                
+            </div>
+        </div>
+        <div class = "right_column" id = "right_column">
+            <div class="right_column_header">
+                <input class="message_search hidden" id="message_search" placeholder="Поиск...">
+                <div class="user_profile" id="user_profile">
+                    <p class="profile_username" id="profile_username"></p>
+                    <p class="profile_last_seen" id="profile_last_seen"></p>
+                </div>
+                <div class="header_options">
+                    <img class="header_options_img" src="source/search.svg">
+                    <img class="header_options_img" src="source/audio_call.svg">
+                    <img class="header_options_img" src="source/video_call.svg">
+                </div>
+            </div>
+            <ul class="message_contextmenu hidden" id="message_contextmenu">
+                    <li class="contextmenu_option" id="contextmenu_ans">Ответить</li>
+                    <li class="contextmenu_option" id="contextmenu_red">Редактировать</li>
+                    <li class="contextmenu_option" id="contextmenu_del">Удалить</li>
+                </ul>
+            <div class = "message_list" id = "message_list">
+                
+            </div>
+            <div class="right_column_footer">
+                <div class="message_top_area hidden" id="message_top_area">
+                    <p class="to_message" id="to_message"></p>
+                    <p class="message_header_field" id="message_header_field"></p>
+                </div>
+                
+                <div class="message_input_area">
+                <textarea class="message_input" id = "message_input" placeholder="Введите сообщение..."></textarea>
+                <button class="send_button" id = "send_button">➤</button>
+            </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+
+    <script src="script/socketConnect.js"></script>
+    <script type = "module" src="script/home.js"></script>
+    
+</body>
+</html>
